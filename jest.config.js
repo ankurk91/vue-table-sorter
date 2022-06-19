@@ -1,10 +1,12 @@
 module.exports = {
   testEnvironment: 'jsdom',
   collectCoverage: true,
-  testURL: 'http://localhost',
+  testEnvironmentOptions: {
+    testURL: 'http://localhost',
+  },
   transform: {
     '^.+\\.js$': 'babel-jest',
-    '.*\\.(vue)$': 'vue-jest'
+    '.*\\.(vue)$': '@vue/vue2-jest'
   },
   moduleFileExtensions: [
     'js',
