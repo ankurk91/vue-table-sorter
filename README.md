@@ -75,7 +75,7 @@ This is an example with Bootstrap css
 
 ```html
 <!-- Vue js -->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7"></script>
 <!-- Lastly add this package -->
 <script src="https://cdn.jsdelivr.net/npm/vue-table-sorter@1"></script>
 <link href="https://cdn.jsdelivr.net/npm/vue-table-sorter@1/dist/vue-table-sorter.css" rel="stylesheet">
@@ -85,10 +85,6 @@ This is an example with Bootstrap css
     Vue.component('th-column', VueTableSorter.TableHeaderColumn);
 </script>
 ```
-
-### Browser support
-
-* Modern browsers only
 
 ## Run examples on your localhost
 
