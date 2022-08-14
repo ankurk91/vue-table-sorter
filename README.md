@@ -24,7 +24,7 @@ This is an example with Bootstrap css
 
 <template>
     <table class="table table-bordered table-hover">
-        <table-header sort-order="name" sort-by="desc" @sort="onSort">
+        <table-header :sort-order="params.sortOrder" :sort-by="params.sortBy" @sort="onSort">
             <th-column column="name">Name</th-column>
             <th-column column="email">Email</th-column>
             <th-column column="joined_at">Joined</th-column>
@@ -52,8 +52,11 @@ This is an example with Bootstrap css
         data() {
             return {
                 items: [],
-                params: {}
-            }
+                params: {
+		  sortOrder: 'desc',
+		  sortBy: 'name',
+		},
+            },
         },
         components: {
             TableHeader,
