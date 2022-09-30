@@ -4,7 +4,7 @@ exports[`TableHeaderColumn component renders with props and slots 1`] = `
 <thead>
   <tr>
     <th
-      class="sortable"
+      class="v-sortable"
     >
       <!---->
        
