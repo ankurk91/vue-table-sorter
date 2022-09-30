@@ -10,10 +10,17 @@ Vue.js component for table sorting
 
 ## [Demo](https://ankurk91.github.io/vue-table-sorter/)
 
+### Version matrix
+
+| Vue.js version | Package version |                                                        Branch |
+| :---           |:---------------:|--------------------------------------------------------------:| 
+| 2.x            |       1.x       | [1.x](https://github.com/ankurk91/vue-table-sorter/tree/v1.x) |
+| 3.x            |       2.x       |                                                        `main` |
+
 ## Installation
 
 ```bash
-npm install vue-table-sorter@^1 
+npm install vue-table-sorter@^2 
 ```
 
 ## Usage
@@ -48,7 +55,7 @@ This is an example with Bootstrap CSS and `axios`
     import {TableHeader, TableHeaderColumn as ThColumn} from 'vue-table-sorter';
     import 'vue-table-sorter/dist/vue-table-sorter.css';
     import axios from 'axios';
-    
+
     export default {
         data() {
             return {
@@ -84,14 +91,15 @@ This is an example with Bootstrap CSS and `axios`
 
 ```html
 <!-- Vue js -->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.7"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@3.2"></script>
 <!-- Lastly add this package -->
-<script src="https://cdn.jsdelivr.net/npm/vue-table-sorter@1"></script>
-<link href="https://cdn.jsdelivr.net/npm/vue-table-sorter@1/dist/vue-table-sorter.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/vue-table-sorter@2"></script>
+<link href="https://cdn.jsdelivr.net/npm/vue-table-sorter@2/dist/vue-table-sorter.css" rel="stylesheet">
 <!-- Init the components -->
 <script>
-    Vue.component('table-header', VueTableSorter.TableHeaderComponent);
-    Vue.component('th-column', VueTableSorter.TableHeaderColumn);
+    const app = Vue.createApp({});
+    app.component('table-header', VueTableSorter.TableHeaderComponent);
+    app.component('th-column', VueTableSorter.TableHeaderColumn);
 </script>
 ```
 

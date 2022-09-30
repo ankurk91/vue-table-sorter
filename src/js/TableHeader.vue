@@ -7,8 +7,9 @@
 </template>
 
 <script>
+import {defineComponent} from 'vue';
 
-export default {
+export default defineComponent({
   name: 'TableHeader',
   props: {
     sortBy: {
@@ -44,5 +45,5 @@ export default {
       this.$emit('sort', newValue)
     }
   },
-}
+})
 </script>

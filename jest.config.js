@@ -3,10 +3,14 @@ module.exports = {
   collectCoverage: true,
   testEnvironmentOptions: {
     testURL: 'http://localhost',
+    customExportConditions: [
+      'node',
+      'node-addons',
+    ],
   },
   transform: {
     '^.+\\.js$': 'babel-jest',
-    '.*\\.(vue)$': '@vue/vue2-jest'
+    '.*\\.(vue)$': '@vue/vue3-jest'
   },
   moduleFileExtensions: [
     'js',

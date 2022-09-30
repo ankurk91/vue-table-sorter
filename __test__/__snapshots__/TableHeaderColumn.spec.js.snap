@@ -3,11 +3,11 @@
 exports[`TableHeaderColumn component renders with props and slots 1`] = `
 <thead>
   <tr>
+    
     <th
       class="v-sortable"
     >
-      <!---->
-       
+      <!--v-if-->
       <svg
         height="16"
         viewBox="0 0 320 512"
@@ -19,11 +19,13 @@ exports[`TableHeaderColumn component renders with props and slots 1`] = `
           fill="#888"
         />
       </svg>
-       
+      
       <span>
         Name
       </span>
+      
     </th>
+    
   </tr>
 </thead>
 `;

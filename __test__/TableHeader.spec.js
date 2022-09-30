@@ -20,7 +20,7 @@ describe('TableHeader component', () => {
     await wrapper.vm.$nextTick();
     expect(wrapper.vm.$el).toMatchSnapshot();
     expect(wrapper.find('th').exists()).toBe(true);
-    wrapper.destroy();
+    wrapper.unmount();
   });
 
   test('emits event on store change', async () => {

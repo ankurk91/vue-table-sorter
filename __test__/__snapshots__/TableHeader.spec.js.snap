@@ -3,11 +3,13 @@
 exports[`TableHeader component renders with props and slots 1`] = `
 <thead>
   <tr>
+    
     <th
       class="text-center"
     >
       Actions
     </th>
+    
   </tr>
 </thead>
 `;

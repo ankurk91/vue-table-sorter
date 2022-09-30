@@ -1,4 +1,5 @@
 import {mount} from '@vue/test-utils';
+import {h} from "vue";
 import TableHeaderColumn from '../src/js/TableHeaderColumn.vue';
 import TableHeader from '../src/js/TableHeader.vue';
 
@@ -6,19 +7,16 @@ describe('TableHeaderColumn component', () => {
   let wrapper;
 
   beforeEach(() => {
-    const thColumn = {
-      render(h, context) {
-        return h(TableHeaderColumn,
-          {
-            props: {
-              column: 'name',
-            }
-          },
-          [
-            h('span', 'Name')
-          ])
-      }
-    };
+
+    const thColumn = () => h(
+      TableHeaderColumn,
+      {
+        column: 'name'
+      },
+      () => [
+        h('span', {innerHTML: 'Name'})
+      ]
+    );
 
     wrapper = mount(TableHeader, {
       propsData: {
@@ -29,6 +27,7 @@ describe('TableHeaderColumn component', () => {
         default: thColumn
       },
     });
+
   });
 
   test('renders with props and slots', async () => {
@@ -36,7 +35,7 @@ describe('TableHeaderColumn component', () => {
     expect(wrapper.vm.$el).toMatchSnapshot();
     expect(wrapper.find('span').exists()).toBe(true);
     expect(wrapper.find('th').classes('v-sortable')).toBe(true);
-    wrapper.destroy();
+    wrapper.unmount();
   });
 
   test('updates store on click', async () => {

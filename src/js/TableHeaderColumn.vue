@@ -37,7 +37,9 @@
 </template>
 
 <script>
-export default {
+import {defineComponent} from 'vue';
+
+export default defineComponent({
   name: 'TableHeaderColumn',
   props: {
     column: {
@@ -67,7 +69,7 @@ export default {
       return !!this.column
     }
   }
-}
+})
 </script>
 
 <style>

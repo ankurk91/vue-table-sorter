@@ -17,9 +17,8 @@ module.exports = {
       path.resolve(__dirname, 'node_modules'),
     ],
     alias: {
-      'vue$': 'vue/dist/vue.runtime.esm.js'
+      vue: "@vue/runtime-dom"
     },
-    extensions: ['.js', '.jsx', '.json', '.vue'],
   },
   entry: './examples/index.js',
   output: {
@@ -91,10 +90,11 @@ module.exports = {
         minifyURLs: isProduction,
       }
     }),
-    new webpack.ProvidePlugin({
-      Vue: ['vue/dist/vue.runtime.esm.js', 'default'],
-    }),
     new VueLoaderPlugin(),
+    new webpack.DefinePlugin({
+      __VUE_OPTIONS_API__: true,
+      __VUE_PROD_DEVTOOLS__: true,
+    }),
   ],
   devServer: {
     host: 'localhost',
