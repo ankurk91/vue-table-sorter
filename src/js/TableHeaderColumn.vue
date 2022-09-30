@@ -1,5 +1,5 @@
 <template>
-  <th @click="onClick" :class="{'sortable': isSortable}">
+  <th @click="onClick" :class="{'v-sortable': isSortable}">
     <template v-if="isSorted">
       <svg
         width="16"
@@ -71,7 +71,7 @@ export default {
 </script>
 
 <style>
-th.sortable {
+th.v-sortable {
   cursor: pointer;
 }
 </style>
