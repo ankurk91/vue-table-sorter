@@ -1,7 +1,7 @@
 {
   "name": "vue-table-sorter",
   "version": "1.0.0",
-  "description": "Vue.js component for table sort.",
+  "description": "Vue.js 2 component for table sort.",
   "main": "dist/vue-table-sorter.js",
   "browser": "dist/vue-table-sorter.min.js",
   "files": [

@@ -18,7 +18,7 @@ npm install vue-table-sorter@^1
 
 ## Usage
 
-This is an example with Bootstrap css
+This is an example with Bootstrap CSS and `axios`
 
 ```html
 
@@ -47,16 +47,17 @@ This is an example with Bootstrap css
     import 'bootstrap/dist/css/bootstrap.min.css';
     import {TableHeader, TableHeaderColumn as ThColumn} from 'vue-table-sorter';
     import 'vue-table-sorter/dist/vue-table-sorter.css';
-
+    import axios from 'axios';
+    
     export default {
         data() {
             return {
                 items: [],
                 params: {
-		  sortOrder: 'desc',
-		  sortBy: 'name',
-		},
-            },
+                    sortOrder: 'desc',
+                    sortBy: 'name',
+                },
+            }
         },
         components: {
             TableHeader,
@@ -66,8 +67,13 @@ This is an example with Bootstrap css
             onSort(params) {
                 console.log({params});
                 this.params = params;
-
-                //todo make ajax call to api and update items
+                this.fetch();
+            },
+            async fetch() {
+                const response = await axios.get('https://localhost/api/items', {
+                    params: this.params
+                })
+                this.items = response.data;
             }
         }
     }
@@ -92,7 +98,7 @@ This is an example with Bootstrap css
 ## Run examples on your localhost
 
 * Clone this repo
-* Make sure you have node-js `>=16.9` and [pnpm](https://pnpm.io/) `>=7.2` pre-installed
+* Make sure you have node-js `>=18.9` and [pnpm](https://pnpm.io/) `>=7.2` pre-installed
 * Install dependencies `pnpm install`
 * Run webpack dev server `npm start`
 * This should open the demo page in your default web browser
