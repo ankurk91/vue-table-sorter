@@ -1,13 +1,12 @@
 <template>
   <thead>
-    <tr>
-      <slot/>
-    </tr>
+  <tr>
+    <slot/>
+  </tr>
   </thead>
 </template>
 
 <script>
-import store from './tableStore';
 
 export default {
   name: 'TableHeader',
@@ -24,17 +23,16 @@ export default {
   },
   data() {
     return {
-      store: store
+      store: {
+        sortBy: this.sortBy,
+        sortOrder: this.sortOrder,
+      }
     }
   },
   provide() {
     return {
       store: this.store
     }
-  },
-  created() {
-    this.store.sortBy = this.sortBy
-    this.store.sortOrder = this.sortOrder
   },
   mounted() {
     this.$watch('store', this.onChange, {

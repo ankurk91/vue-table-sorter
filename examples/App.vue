@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import ComponentExample from './components/component';
+import ComponentExample from './components/Component.vue';
 
 export default {
   name: 'app',

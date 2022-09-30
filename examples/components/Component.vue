@@ -4,7 +4,7 @@
       <h4 class="card-title">Table example</h4>
 
       <table class="table table-bordered table-hover">
-        <table-header sort-order="desc" sort-by="name" @sort="onSort">
+        <table-header :sort-order="this.params.sortOrder" :sort-by="this.params.sortBy" @sort="onSort">
           <th-column column="name">
             Name
           </th-column>
@@ -49,7 +49,10 @@ export default {
   data() {
     return {
       items: [],
-      params: {}
+      params: {
+        sortBy: 'name',
+        sortOrder: 'desc',
+      }
     }
   },
   components: {
