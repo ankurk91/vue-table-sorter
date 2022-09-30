@@ -35,7 +35,7 @@ describe('TableHeaderColumn component', () => {
     await wrapper.vm.$nextTick();
     expect(wrapper.vm.$el).toMatchSnapshot();
     expect(wrapper.find('span').exists()).toBe(true);
-    expect(wrapper.find('th').classes('sortable')).toBe(true);
+    expect(wrapper.find('th').classes('v-sortable')).toBe(true);
     wrapper.destroy();
   });
 
