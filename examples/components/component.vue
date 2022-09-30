@@ -4,7 +4,7 @@
       <h4 class="card-title">Table example</h4>
 
       <table class="table table-bordered table-hover">
-        <table-header sort-order="name" sort-by="desc" @sort="onSort">
+        <table-header sort-order="desc" sort-by="name" @sort="onSort">
           <th-column column="name">
             Name
           </th-column>
