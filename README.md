@@ -98,7 +98,7 @@ This is an example with Bootstrap CSS and `axios`
 ## Run examples on your localhost
 
 * Clone this repo
-* Make sure you have node-js `>=18.12` and [pnpm](https://pnpm.io/) `>=7.2` pre-installed
+* Make sure you have node-js `>=18.12` and [pnpm](https://pnpm.io/) `>=7.12` pre-installed
 * Install dependencies `pnpm install`
 * Run webpack dev server `npm start`
 * This should open the demo page in your default web browser
@@ -107,7 +107,6 @@ This is an example with Bootstrap CSS and `axios`
 
 * This package is using [Jest](https://github.com/facebook/jest)
   and [vue-test-utils](https://github.com/vuejs/vue-test-utils) for testing.
-* Tests can be found in `__test__` folder.
 * Execute tests with this command `npm test`
 
 ## License
