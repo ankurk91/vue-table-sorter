@@ -1,9 +1,8 @@
 {
   "name": "vue-table-sorter",
   "version": "2.0.0",
-  "description": "Vue.js component for table sort.",
+  "description": "Vue.js component for table sorting.",
   "main": "dist/vue-table-sorter.js",
-  "browser": "dist/vue-table-sorter.min.js",
   "files": [
     "src",
     "dist",
@@ -25,12 +24,12 @@
   },
   "homepage": "https://github.com/ankurk91/vue-table-sorter",
   "scripts": {
-    "test": "jest",
+    "test": "jest --runInBand",
     "test:watch": "npm run test --watch --notify",
     "start": "npm run dev",
-    "dev": "cross-env NODE_ENV=development webpack serve --progress --hot --config=webpack.config.dev.js",
-    "docs": "cross-env NODE_ENV=production webpack --config=webpack.config.dev.js --progress --mode=production",
-    "build": "cross-env NODE_ENV=production webpack --progress --mode=production",
+    "dev": "webpack serve --node-env=development --progress --hot --config=webpack.config.dev.js",
+    "docs": "webpack --node-env=production --config=webpack.config.dev.js --progress --mode=production",
+    "build": "webpack --node-env=production --progress --mode=production",
     "prepublishOnly": "npm run test && npm run build"
   },
   "devDependencies": {
@@ -42,7 +41,6 @@
     "babel-jest": "^29.1.2",
     "babel-loader": "^8.2.5",
     "bootstrap": "^4.6.0",
-    "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",

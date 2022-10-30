@@ -14,12 +14,21 @@
           <th-column column="joined_at">
             Joined
           </th-column>
+          <th-column column="id">
+            <template #before>
+              <div class="custom-control custom-checkbox d-inline-block">
+                <input type="checkbox" class="custom-control-input" id="select-all">
+                <label class="custom-control-label" for="select-all"></label>
+              </div>
+            </template>
+            Selection
+          </th-column>
           <th-column class="text-center">
             Actions
           </th-column>
         </table-header>
         <tbody>
-        <tr v-for="item in items" :key="item.index">
+        <tr v-for="item in items" :key="item.id">
           <td>
             {{ item.name }}
           </td>
@@ -28,6 +37,12 @@
           </td>
           <td>
             {{ item.joined_at.toLocaleDateString() }}
+          </td>
+          <td>
+            <div class="custom-control custom-checkbox d-inline-block">
+              <input type="checkbox" class="custom-control-input" :id="`select-all-${item.id}`">
+              <label class="custom-control-label" :for="`select-all-${item.id}`">Select</label>
+            </div>
           </td>
           <td class="text-center">
             <button class="btn btn-sm btn-outline-danger">Trash</button>

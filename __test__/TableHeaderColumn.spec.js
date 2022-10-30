@@ -14,7 +14,7 @@ describe('TableHeaderColumn component', () => {
         column: 'name'
       },
       () => [
-        h('span', {innerHTML: 'Name'})
+        h('div', {innerHTML: 'Name'})
       ]
     );
 
@@ -33,13 +33,13 @@ describe('TableHeaderColumn component', () => {
   test('renders with props and slots', async () => {
     await wrapper.vm.$nextTick();
     expect(wrapper.vm.$el).toMatchSnapshot();
-    expect(wrapper.find('span').exists()).toBe(true);
-    expect(wrapper.find('th').classes('v-sortable')).toBe(true);
+    expect(wrapper.find('div').exists()).toBe(true);
+    expect(wrapper.find('span').classes('v-sortable')).toBe(true);
     wrapper.unmount();
   });
 
   test('updates store on click', async () => {
-    wrapper.find('th').trigger('click')
+    wrapper.find('.v-label').trigger('click')
 
     await wrapper.vm.$nextTick();
 
