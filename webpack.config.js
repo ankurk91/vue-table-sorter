@@ -15,7 +15,6 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.runtime.esm.js'
     },
-    extensions: ['.js', '.json', '.vue']
   },
   entry: {
     'vue-table-sorter': './src/index.js',
@@ -33,10 +32,12 @@ module.exports = {
     clean: true,
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    library: 'VueTableSorter',
-    libraryTarget: 'umd',
+    library: {
+      name: 'VueTableSorter',
+      type: 'umd',
+      umdNamedDefine: true,
+    },
     globalObject: 'this',
-    umdNamedDefine: true,
   },
   module: {
     rules: [

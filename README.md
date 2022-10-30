@@ -2,9 +2,9 @@
 
 [![downloads](https://badgen.net/npm/dt/vue-table-sorter)](https://npm-stat.com/charts.html?package=vue-table-sorter&from=2022-01-01)
 [![npm-version](https://badgen.net/npm/v/vue-table-sorter)](https://www.npmjs.com/package/vue-table-sorter)
-[![github-tag](https://badgen.net/github/tag/ankurk91/vue-table-sorter)](https://github.com/ankurk91/vue-table-sorter/)
+[![github-tag](https://badgen.net/github/tag/ankurk91/vue-table-sorter)](https://github.com/ankurk91/vue-table-sorter/tags)
 [![build](https://github.com/ankurk91/vue-table-sorter/workflows/build/badge.svg)](https://github.com/ankurk91/vue-table-sorter/actions)
-[![license](https://badgen.net/github/license/ankurk91/vue-table-sorter)](https://yarnpkg.com/en/package/vue-table-sorter)
+[![license](https://badgen.net/github/license/ankurk91/vue-table-sorter)](LICENSE.txt)
 
 Vue.js component for table sorting
 
@@ -98,7 +98,7 @@ This is an example with Bootstrap CSS and `axios`
 ## Run examples on your localhost
 
 * Clone this repo
-* Make sure you have node-js `>=18.9` and [pnpm](https://pnpm.io/) `>=7.2` pre-installed
+* Make sure you have node-js `>=18.12` and [pnpm](https://pnpm.io/) `>=7.2` pre-installed
 * Install dependencies `pnpm install`
 * Run webpack dev server `npm start`
 * This should open the demo page in your default web browser
