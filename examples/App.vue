@@ -35,18 +35,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import ComponentExample from './components/Component.vue';
-
-export default {
-  name: 'app',
-  data() {
-    return {}
-  },
-  components: {
-    ComponentExample,
-  },
-  methods: {}
-}
 </script>
 
