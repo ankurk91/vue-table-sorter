@@ -91,7 +91,7 @@ This is an example with Bootstrap CSS and `axios`
 
 ```html
 <!-- Vue js -->
-<script src="https://cdn.jsdelivr.net/npm/vue@3.2"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@3.3"></script>
 <!-- Lastly add this package -->
 <script src="https://cdn.jsdelivr.net/npm/vue-table-sorter@2"></script>
 <link href="https://cdn.jsdelivr.net/npm/vue-table-sorter@2/dist/vue-table-sorter.css" rel="stylesheet">
@@ -106,7 +106,7 @@ This is an example with Bootstrap CSS and `axios`
 ## Run examples on your localhost
 
 * Clone this repo
-* Make sure you have node-js `>=18.13` and [pnpm](https://pnpm.io/) `>=7.26` pre-installed
+* Make sure you have node-js `>=18.16` and [pnpm](https://pnpm.io/) `>=8.0` pre-installed
 * Install dependencies `pnpm install`
 * Run webpack dev server `npm start`
 * This should open the demo page in your default web browser
